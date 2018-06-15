@@ -1,0 +1,57 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "new-cap": 0,
+    "max-len": 0,
+    "space-before-function-paren": 0,
+    "prefer-const": 0,
+    "indent": [
+      "error",
+      2,
+      {
+        "MemberExpression": 0,
+        "SwitchCase": 1
+      }
+    ],
+    "no-param-reassign": 0,
+    "no-underscore-dangle": 0,
+    "import/no-unresolved": 0,
+    "global-require": 0,
+    "class-methods-use-this": 0,
+    "no-plusplus": 0,
+    "no-mixed-operators": 0,
+    "import/no-dynamic-require": 0,
+    "no-use-before-define": 0,
+    "no-multi-assign": 0,
+    "no-restricted-globals": 0,
+    "no-loop-func": 0,
+    "no-await-in-loop": 0,
+    "no-continue": 0,
+    "func-names": 0
+  },
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "before": true,
+    "beforeEach": true,
+    "after": true,
+    "afterEach": true,
+    "isFinite": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": [
+          "./",
+          "./src"
+        ]
+      }
+    }
+  }
+}
