@@ -1,0 +1,3 @@
+const setting = require('./setting-generator.js');
+
+module.exports = setting;

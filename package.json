@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "migrate:local": "sequelize db:migrate",
+    "migrate:stg": "NODE_ENV=stg sequelize db:migrate",
+    "migrate:production": "NODE_ENV=production sequelize db:migrate"
   },
   "dependencies": {
     "bcrypt": "^1.0.3",

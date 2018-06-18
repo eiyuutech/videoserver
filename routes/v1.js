@@ -5,7 +5,7 @@ const path = require('path');
 const UserController = require('./../controllers/UserController');
 const CategoryController = require('./../controllers/CategoryController');
 const HomeController = require('./../controllers/HomeController');
-const custom = require('./../middleware/custom');
+const category = require('./../middleware/category');
 
 const router = express.Router();
 
@@ -22,11 +22,11 @@ router.delete('/users', passport.authenticate('jwt', { session: false }), UserCo
 router.post('/users/login', UserController.login);
 
 router.post('/categories', passport.authenticate('jwt', { session: false }), CategoryController.create);
-router.get('/categories', passport.authenticate('jwt', { session: false }), CategoryController.getAll);
+router.get('/categories', passport.authenticate('jwt', { session: false }), category.categoryAddConditionsMiddleware, CategoryController.getAll);
 
-router.get('/categories/:category_id', passport.authenticate('jwt', { session: false }), custom.categoryMiddleware, CategoryController.get);
-router.put('/categories/:category_id', passport.authenticate('jwt', { session: false }), custom.categoryMiddleware, CategoryController.update);
-router.delete('/categories/:category_id', passport.authenticate('jwt', { session: false }), custom.categoryMiddleware, CategoryController.remove);
+router.get('/categories/:category_id', passport.authenticate('jwt', { session: false }), category.categoryAddParamsMiddleware, CategoryController.get);
+router.put('/categories/:category_id', passport.authenticate('jwt', { session: false }), category.categoryAddParamsMiddleware, CategoryController.update);
+router.delete('/categories/:category_id', passport.authenticate('jwt', { session: false }), category.categoryAddParamsMiddleware, CategoryController.remove);
 
 router.get('/dash', passport.authenticate('jwt', { session: false }), HomeController.Dashboard);
 

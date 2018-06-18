@@ -27,9 +27,32 @@ npm i
 http://localhost:3000/v1/xxx
 ```
 
-#### TEST
+#### MIGRATIONS
+
+##### create database
 ```
-create database 'eas_video_solution' to mysql
+sequelize db:create
+```
+
+##### create migration file
+```
+sequelize migration:create --name=CreateNewTable
+```
+
+##### excute migration
+```
+-- local
+npm run migrate:local
+
+-- staging
+npm run migrate:stg
+
+-- production
+npm run migrate:production
+```
+##### generate schema
+```
+sequelize-auto -o "models" -d eas_video_solution -h localhost -u root -p 3306  -e mysql -t xxx
 ```
 
 #### Create .env File

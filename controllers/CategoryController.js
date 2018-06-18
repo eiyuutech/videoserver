@@ -29,7 +29,7 @@ const getAll = async function(req, res) {
   let err;
   let categories;
 
-  [err, categories] = await to(Category.findAll());
+  [err, categories] = await to(Category.findAll(req.conditions));
   if (err) return ReE(res, err, 422);
 
   let categoriesJson = [];

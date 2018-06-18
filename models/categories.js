@@ -1,6 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
   let Model = sequelize.define('categories', {
     name: DataTypes.STRING,
+    parent_id: DataTypes.INTEGER
+  }, {
+     underscored: true
   });
 
   // Model.associate = function(models){
