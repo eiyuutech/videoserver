@@ -1,0 +1,37 @@
+{
+    "dev": {
+        "host": "smtp.ethereal.email",
+        "port": 587,
+        "user": "oo7xwdbmwf7kp5db@ethereal.email",
+        "pass": "yYmSD7fraWmCNZFDdQ",
+        "ssl": false,
+        "tls": false
+    },
+    "test": {
+        "host": "",
+        "port": 587,
+        "user": "",
+        "pass": "",
+        "ssl": false,
+        "tls": false
+    },
+    "stg": {
+        "host": "",
+        "port": 587,
+        "user": "",
+        "pass": "",
+        "ssl": false,
+        "tls": false
+    },
+    "production": {
+        "host": "",
+        "port": 587,
+        "user": "",
+        "pass": "",
+        "ssl": false,
+        "tls": false
+    },
+    "from_address": {
+        "main": "eas<dev@evolable.asia>"
+    }
+}
