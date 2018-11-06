@@ -3,6 +3,8 @@ import mailConfig from '../../config/mail-server.json';
 import mailer from './node-mailer';
 import emailEnvChecker from './email-env-checker';
 
+const CONFIG = require('../../config/config');
+
 const env = CONFIG.app;
 const {
   host,

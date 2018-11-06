@@ -1,3 +1,4 @@
+const CONFIG = require('../../config/config');
 const env = CONFIG.app;
 
 const emailAddress = (email) => {

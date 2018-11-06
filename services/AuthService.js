@@ -4,6 +4,8 @@ import mailCreator from './mail-service/mail-creator';
 import mailService from './mail-service';
 import mailConfig from '../config/mail-server.json';
 
+const {TE, to}          = require('../services/UtilService');
+const CONFIG            = require('../config/config');
 const User = models.users;
 const env = CONFIG.app;
 
