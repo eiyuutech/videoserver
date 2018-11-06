@@ -1,5 +1,5 @@
 # videoserver
-Node Js API for Video Solution.
+Node Js API for PMS.
 
 ## Description
 This is an Restful API for Node.js and Mysql. This is in the MVC format,
@@ -14,7 +14,6 @@ except because it is an API there are no views, just models and controllers.
 #### Donwload Code | Clone the Repo
 
 ```
-git clone https://github.com/eiyuutech/videoserver.git
 ```
 
 #### Install Node Modules
@@ -24,7 +23,7 @@ npm i
 
 #### API PATH
 ```
-http://localhost:3000/v1/xxx
+http://localhost:4000/v1/xxx
 ```
 
 #### MIGRATIONS
@@ -52,7 +51,7 @@ npm run migrate:production
 ```
 ##### generate schema
 ```
-sequelize-auto -o "models" -d eas_video_solution -h localhost -u root -p 3306  -e mysql -t xxx
+sequelize-auto -o "models" -d pms_db -h localhost -u root -p 3306  -e mysql -t xxx
 ```
 
 #### Create .env File
