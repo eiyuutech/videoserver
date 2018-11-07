@@ -5,6 +5,8 @@ const path = require('path');
 const UserController = require('./../controllers/UserController');
 const CategoryController = require('./../controllers/CategoryController');
 const HomeController = require('./../controllers/HomeController');
+const TodoController = require('./../controllers/TodoController');
+
 const category = require('./../middleware/category');
 
 const router = express.Router();
@@ -27,6 +29,8 @@ router.get('/categories', passport.authenticate('jwt', { session: false }), cate
 router.get('/categories/:category_id', passport.authenticate('jwt', { session: false }), category.categoryAddParamsMiddleware, CategoryController.get);
 router.put('/categories/:category_id', passport.authenticate('jwt', { session: false }), category.categoryAddParamsMiddleware, CategoryController.update);
 router.delete('/categories/:category_id', passport.authenticate('jwt', { session: false }), category.categoryAddParamsMiddleware, CategoryController.remove);
+
+router.get('/todos', TodoController.getAll);
 
 router.get('/dash', passport.authenticate('jwt', { session: false }), HomeController.Dashboard);
 
