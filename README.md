@@ -21,6 +21,12 @@ except because it is an API there are no views, just models and controllers.
 npm i
 ```
 
+#### Start
+After installing mysql and creating database "pms_db" to localhost run:
+```
+npm start
+```
+
 #### API PATH
 ```
 http://localhost:4000/v1/xxx
